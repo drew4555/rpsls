@@ -1,0 +1,7 @@
+C:\Users\Andrew\source\repos\Rpsls\obj\Debug\Rpsls.csprojAssemblyReference.cache
+C:\Users\Andrew\source\repos\Rpsls\obj\Debug\Rpsls.csproj.CoreCompileInputs.cache
+C:\Users\Andrew\source\repos\Rpsls\bin\Debug\Rpsls.exe.config
+C:\Users\Andrew\source\repos\Rpsls\bin\Debug\Rpsls.exe
+C:\Users\Andrew\source\repos\Rpsls\bin\Debug\Rpsls.pdb
+C:\Users\Andrew\source\repos\Rpsls\obj\Debug\Rpsls.exe
+C:\Users\Andrew\source\repos\Rpsls\obj\Debug\Rpsls.pdb
