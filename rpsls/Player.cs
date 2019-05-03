@@ -11,19 +11,20 @@ namespace Rpsls
         //has a
         public List<string> choices = new List<string>();
         public string gesture;
+     
 
         //constructor (spawner)
         public Player()
         {
-            choices.Add("Rock");
-            choices.Add("Paper");
-            choices.Add("Scissors");
-            choices.Add("Lizard");
-            choices.Add("Spock");
+            choices.Add("rock");
+            choices.Add("paper");
+            choices.Add("scissors");
+            choices.Add("lizard");
+            choices.Add("spock");
         }
 
         //can do
-        public abstract string ChooseGesture();
+        public abstract void ChooseGesture();
     }
 }
 

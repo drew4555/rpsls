@@ -14,45 +14,49 @@ namespace Rpsls
         // member methods (CAN DO)
 
         //random choice
-        public override string ChooseGesture()
+        private int RandomNumber(int min, int max)
         {
-            int RandomNumber(int min, int max)
-            {
-                Random compChoice = new Random();
-                compChoice.Next(min, max);
+            Random compChoice = new Random();
+            int randomNumber = compChoice.Next(min, max);
+            return randomNumber;
+        }
+        public override void ChooseGesture()
+        {
+            int computerChoice = RandomNumber(0, 4);
 
-                RandomNumber(0, 4);
-                int computerChoice = RandomNumber(0, 4);
-                string compPoop;
-
+            
 
                 if (computerChoice == 0)
                 {
-                    Console.WriteLine("Your Opponent Chooses Rock");
-                    return compPoop = "Rock";
+                Console.WriteLine("Your Opponent Chooses Rock");
+                Console.ReadKey();
+                Console.Clear();
                 }
                 if (computerChoice == 1)
                 {
-                    Console.WriteLine("Your Opponent Chooses Paper");
-                    return compPoop = "paper";
-                }
+                Console.WriteLine("Your Opponent Chooses Paper");
+                Console.ReadKey();
+                Console.Clear();
+            }
                 if (computerChoice == 2)
                 {
-                    Console.WriteLine("Your Opponent Chooses Scissors");
-                    return compPoop = "Scissors";
-                }
+                Console.WriteLine("Your Opponent Chooses Scissors");
+                Console.ReadKey();
+                Console.Clear();
+            }
                 if (computerChoice == 3)
                 {
-                    Console.WriteLine("Your Opponent Chooses Lizard");
-                    return compPoop = "Lizard";
-                }
+                Console.WriteLine("Your Opponent Chooses Lizard");
+                Console.ReadKey();
+                Console.Clear();
+            }
                 if (computerChoice == 4)
                 {
-                    Console.WriteLine("Your Opponent Chooses Spock");
-                    return compPoop = "Spock";
-                }
-
+                Console.WriteLine("Your Opponent Chooses Spock");
+                Console.ReadKey();
+                Console.Clear();
             }
+            gesture = choices[computerChoice];
         }
 
 

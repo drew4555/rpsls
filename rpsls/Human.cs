@@ -9,44 +9,46 @@ namespace Rpsls
     class Human : Player // inheritance (IS A TYPE OF)
     {
         // member variables (HAS A)
-        public override string ChooseGesture()
+        public override void ChooseGesture()
         {
             Console.WriteLine("do you choose Rock, Paper, Scissors, Lizard, or Spock");
-            string UserChoice = Console.ReadLine();
-            switch (UserChoice)
+            gesture = Console.ReadLine();
+            switch (gesture)
             {
-                case "Rock":
+                case "rock":
                     Console.WriteLine("You Chose Rock");
                     Console.ReadKey();
                     Console.Clear();
                     break;
-                case "Paper":
+                case "paper":
                     Console.WriteLine("You Chose Paper");
                     Console.ReadLine();
                     Console.Clear();
                     break;
-                case "Scissors":
+                case "scissors":
                     Console.WriteLine("You Chose Scissors");
                     Console.ReadLine();
                     Console.Clear();
                     break;
-                case "Lizzard":
-                    Console.WriteLine("You Chose Lizoard");
+                case "lizard":
+                    Console.WriteLine("You Chose Lizard");
                     Console.ReadLine();
                     Console.Clear();
                     break;
-                case "Spock":
+                case "spock":
                     Console.WriteLine("You Chose Spock");
                     Console.ReadLine();
                     Console.Clear();
                     break;
-                default:
+               default:
                     Console.WriteLine("You Must Choose One");
                     Console.ReadLine();
                     Console.Clear();
+                    ChooseGesture();
                     break;
-
+                    
             }
-        }
+
+        } 
     }
 }
