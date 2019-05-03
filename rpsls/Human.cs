@@ -17,36 +17,26 @@ namespace Rpsls
             {
             case "rock":
                 Console.WriteLine("You Chose Rock");
-                Console.ReadKey();
-                Console.Clear();
                 break;
             case "paper":
                 Console.WriteLine("You Chose Paper");
-                Console.ReadLine();
-                Console.Clear();
                 break;
             case "scissors":
                 Console.WriteLine("You Chose Scissors");
-                Console.ReadLine();
-                Console.Clear();
                 break;
             case "lizard":
                 Console.WriteLine("You Chose Lizard");
-                Console.ReadLine();
-                Console.Clear();
                 break;
             case "spock":
                 Console.WriteLine("You Chose Spock");
-                Console.ReadLine();
-                Console.Clear();
                 break;
             default:
                 Console.WriteLine("You Must Choose One");
-                Console.ReadLine();
-                Console.Clear();
                 ChooseGesture();
                 break;
             }
+            Console.ReadLine();
+            Console.Clear();
         } 
     }
 }

@@ -19,36 +19,36 @@ namespace Rpsls
         }
         public override void ChooseGesture()
         {
-        int computerChoice = RandomNumber(0, 4);
+            int computerChoice = RandomNumber(0, 4);
             if (computerChoice == 0)
             {
-            Console.WriteLine("Your Opponent Chooses Rock");
-            Console.ReadKey();
-            Console.Clear();
+                Console.WriteLine("Your Opponent Chooses Rock");
+                Console.ReadKey();
+                Console.Clear();
             }
-            if (computerChoice == 1)
+            else if (computerChoice == 1)
             {
-            Console.WriteLine("Your Opponent Chooses Paper");
-            Console.ReadKey();
-            Console.Clear();
+                Console.WriteLine("Your Opponent Chooses Paper");
+                Console.ReadKey();
+                Console.Clear();
             }
-            if (computerChoice == 2)
+            else if (computerChoice == 2)
             {
-            Console.WriteLine("Your Opponent Chooses Scissors");
-            Console.ReadKey();
-            Console.Clear();
+                Console.WriteLine("Your Opponent Chooses Scissors");
+                Console.ReadKey();
+                Console.Clear();
             }
-            if (computerChoice == 3)
+            else if (computerChoice == 3)
             {
-            Console.WriteLine("Your Opponent Chooses Lizard");
-            Console.ReadKey();
-            Console.Clear();
+                Console.WriteLine("Your Opponent Chooses Lizard");
+                Console.ReadKey();
+                Console.Clear();
             }
-            if (computerChoice == 4)
+            else if (computerChoice == 4)
             {
-            Console.WriteLine("Your Opponent Chooses Spock");
-            Console.ReadKey();
-            Console.Clear();
+                Console.WriteLine("Your Opponent Chooses Spock");
+                Console.ReadKey();
+                Console.Clear();
             }
             gesture = choices[computerChoice];
         }

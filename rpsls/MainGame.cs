@@ -11,8 +11,8 @@ namespace Rpsls
         //has a
         private Player Player1;
         private Player Player2;
-        private int Player1Score = 0;
-        private int Player2Score = 0;
+        //private int Player1Score = 0;
+        //private int Player2Score = 0;
         private int maxScore = 2;
 
 
@@ -52,7 +52,7 @@ namespace Rpsls
                     break;
             }
 
-            while (Player1Score < maxScore && Player2Score < maxScore) 
+            while (Player1.playerScore < maxScore && Player2.playerScore < maxScore) 
             {
                 Player1.ChooseGesture();
 
@@ -61,13 +61,13 @@ namespace Rpsls
                 VictoryConditions();
                 Console.Clear();
             }
-            if(Player1Score == 2)
+            if(Player1.playerScore == 2)
             {
                 Console.WriteLine("Player 1 wins");
                 Console.ReadKey();
                 Replay();
             }
-            else if(Player2Score == 2)
+            else if(Player2.playerScore == 2)
             {
                 Console.WriteLine("Player 2 wins");
                 Console.ReadKey();
@@ -86,72 +86,72 @@ namespace Rpsls
             {
                 Console.WriteLine("You Win This Round");
                 Console.ReadKey();
-                Player1Score++;
+                Player1.playerScore++;
             }
             else if (Player1.gesture == "paper" && Player2.gesture == "rock" ||
                 Player1.gesture == "paper" && Player2.gesture == "spock")
             {
                 Console.WriteLine("You Win This Round");
                 Console.ReadKey();
-                Player1Score++;
+                Player1.playerScore++;
             }
             else if (Player1.gesture == "scissors" && Player2.gesture == "paper" ||
      Player1.gesture == "scissors" && Player2.gesture == "lizard")
             {
                 Console.WriteLine("You Win This Round");
                 Console.ReadKey();
-                Player1Score++;
+                Player1.playerScore++;
             }
             else if (Player1.gesture == "lizard" && Player2.gesture == "paper" ||
      Player1.gesture == "lizard" && Player2.gesture == "spock")
             {
                 Console.WriteLine("You Win This Round");
                 Console.ReadKey();
-                Player1Score++;
+                Player1.playerScore++;
             }
             else if (Player1.gesture == "spock" && Player2.gesture == "rock" ||
      Player1.gesture == "spock" && Player2.gesture == "scissors")
             {
                 Console.WriteLine("You Win This Round");
                 Console.ReadKey();
-                Player1Score++;
+                Player1.playerScore++;
             }
             else if (Player2.gesture == "rock" && Player1.gesture == "lizard" ||
      Player2.gesture == "rock" && Player1.gesture == "scissors")
             {
                 Console.WriteLine("You loose this round");
                 Console.ReadKey();
-                Player2Score++;
+                Player2.playerScore++;
             }
             else if (Player2.gesture == "paper" && Player1.gesture == "rock" ||
      Player2.gesture == "paper" && Player1.gesture == "spock")
             {
                 Console.WriteLine("You loose this round");
                 Console.ReadKey();
-                Player2Score++;
+                Player2.playerScore++;
             }
             else if (Player2.gesture == "scissors" && Player1.gesture == "paper" ||
      Player2.gesture == "scissors" && Player1.gesture == "lizard")
             {
                 Console.WriteLine("You loose this round");
                 Console.ReadKey();
-                Player2Score++;
+                Player2.playerScore++;
             }
             else if (Player2.gesture == "lizard" && Player1.gesture == "paper" ||
      Player2.gesture == "lizard" && Player1.gesture == "spock")
             {
                 Console.WriteLine("You loose this round");
                 Console.ReadKey();
-                Player2Score++;
+                Player2.playerScore++;
             }
             else if (Player2.gesture == "spock" && Player1.gesture == "rock" ||
      Player2.gesture == "spock" && Player2.gesture == "scissors")
             {
                 Console.WriteLine("You loose this round");
                 Console.ReadKey();
-                Player2Score++;
+                Player2.playerScore++;
             }
-            Console.WriteLine("Player 1 Score:" + Player1Score + " " + "Player 2 Score:" + Player2Score);
+            Console.WriteLine("Player 1 Score:" + Player1.playerScore + " " + "Player 2 Score:" + Player2.playerScore);
             Console.ReadKey();
         }
         public void Replay()
@@ -162,8 +162,8 @@ namespace Rpsls
             switch (replaygame)
             {
                 case "yes":
-                    Player1Score = 0;
-                    Player2Score = 0;
+                    Player1.playerScore = 0;
+                    Player2.playerScore = 0;
                     Console.Clear();
                     StartGame();
                     break;
