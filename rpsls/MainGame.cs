@@ -25,14 +25,13 @@ namespace Rpsls
         //can do
         public void StartGame()
         {
-            Console.WriteLine("Welcome To RockPaperScissorsLizardSpock. The Rules are Simple. Scissors cuts Paper, " +
-                "Paper covers Rock, Rock crushes Lizard, Lizard poisons Spock, Spock smashes Scissors, " +
-                "Scissors decapitates Lizard, Lizard eats Paper, Paper disproves Spock, Spock vaporizes Rock " +
-                "(and as it always has) Rock crushes Scissors");
+            Console.WriteLine("Welcome To RockPaperScissorsLizardSpock.\nThe Rules are Simple. Scissors cuts Paper, " +
+                "Paper covers Rock, Rock crushes Lizard, Lizard poisons Spock,\n Spock smashes Scissors, " +
+                "Scissors decapitates Lizard, Lizard eats Paper, Paper disproves Spock,\n Spock vaporizes Rock " +
+                "(and as it always has) Rock crushes Scissors");     
             Console.WriteLine("Lets Play!!");
             Console.ReadKey();
             Console.Clear();
-            //Console.WriteLine("How Many rounds would you like to play? (3,5 or 7)");
 
             Console.WriteLine("How Many Players Are Playing (1 or 2)");
             string starting;
@@ -46,6 +45,10 @@ namespace Rpsls
                 case "2":
                     Player1 = new Human();
                     Player2 = new Human();
+                    break;
+                default:
+                    Console.WriteLine("Please Choose either 1 or 2");
+                    StartGame();
                     break;
             }
 
@@ -62,11 +65,13 @@ namespace Rpsls
             {
                 Console.WriteLine("Player 1 wins");
                 Console.ReadKey();
+                Replay();
             }
             else if(Player2Score == 2)
             {
                 Console.WriteLine("Player 2 wins");
                 Console.ReadKey();
+                Replay();
             }
         }
         public void VictoryConditions() {
@@ -126,7 +131,7 @@ namespace Rpsls
                 Player2Score++;
             }
             else if (Player2.gesture == "scissors" && Player1.gesture == "paper" ||
-     Player2.gesture == "scissors" && Player1.gesture == "spock")
+     Player2.gesture == "scissors" && Player1.gesture == "lizard")
             {
                 Console.WriteLine("You loose this round");
                 Console.ReadKey();
@@ -148,6 +153,29 @@ namespace Rpsls
             }
             Console.WriteLine("Player 1 Score:" + Player1Score + " " + "Player 2 Score:" + Player2Score);
             Console.ReadKey();
+        }
+        public void Replay()
+        {
+            Console.WriteLine("would You Like to play Again?");
+            string replaygame;
+            replaygame = Console.ReadLine();
+            switch (replaygame)
+            {
+                case "yes":
+                    Player1Score = 0;
+                    Player2Score = 0;
+                    Console.Clear();
+                    StartGame();
+                    break;
+                case "no":
+                    Console.Clear();
+                    break;
+                default:
+                    Console.WriteLine("Please Choose Yes or No");
+                    Console.ReadKey();
+                    Replay();
+                    break;
+            }
         }
     }
 }
